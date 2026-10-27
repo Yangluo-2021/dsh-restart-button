@@ -1,0 +1,14 @@
+# dependencies
+node_modules/
+
+# packaged output
+*.tgz
+
+# screenshots and other local evidence
+shots/
+
+# editor / OS noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

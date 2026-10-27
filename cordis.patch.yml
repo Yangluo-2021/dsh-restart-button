@@ -1,0 +1,5 @@
+# dsh bundle patch: inserts this plugin into a profile's layer stack.
+# The id has to match what this package registers (lib/index.js `export const name`).
+- insert:
+    - id: dsh-restart-button
+      name: 'dsh-restart-button'

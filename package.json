@@ -1,0 +1,51 @@
+{
+  "name": "dsh-restart-button",
+  "description": "A restart button floating at the top-right of DeepSeek Harness — restart the whole desktop app gracefully, with a confirmation only when work is running. · DSH 右上角常驻重启按钮：优雅重启整个桌面端，有任务在跑时才确认。",
+  "version": "0.6.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "os": [
+    "win32"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "restart",
+    "relaunch"
+  ],
+  "scripts": {
+    "smoke": "node scripts/smoke.mjs",
+    "e2e": "node scripts/e2e.mjs"
+  },
+  "files": [
+    "lib",
+    "client",
+    "scripts",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "react"
+      ],
+      "platform": "web"
+    }
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  }
+}
