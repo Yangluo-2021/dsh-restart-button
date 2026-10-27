@@ -1,10 +1,11 @@
 {
-  "name": "dsh-restart-button",
+  "name": "@877701572-wq/dsh-restart-button",
   "description": "A restart button floating at the top-right of DeepSeek Harness — restart the whole desktop app gracefully, with a confirmation only when work is running. · DSH 右上角常驻重启按钮：优雅重启整个桌面端，有任务在跑时才确认。",
   "version": "0.6.0",
   "type": "module",
   "main": "lib/index.js",
   "license": "MIT",
+  "author": "Yangluo",
   "os": [
     "win32"
   ],
@@ -19,6 +20,18 @@
     "restart",
     "relaunch"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/877701572-wq/dsh-restart-button.git"
+  },
+  "homepage": "https://github.com/877701572-wq/dsh-restart-button#readme",
+  "bugs": {
+    "url": "https://github.com/877701572-wq/dsh-restart-button/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
   "scripts": {
     "smoke": "node scripts/smoke.mjs",
     "e2e": "node scripts/e2e.mjs"
