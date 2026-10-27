@@ -2,4 +2,4 @@
 # The id has to match what this package registers (lib/index.js `export const name`).
 - insert:
     - id: dsh-restart-button
-      name: '@877701572-wq/dsh-restart-button'
+      name: '@yangluo-2021/dsh-restart-button'

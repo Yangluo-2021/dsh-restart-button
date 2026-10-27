@@ -31,7 +31,7 @@ DSH 右上角一个**常驻**按钮：点一下，让整个桌面端（Electron 
 
 ```bash
 # profile 名换成你宿主的 profile；DSH Desktop 一般是 desktop
-dsh plugin --profile desktop add @877701572-wq/dsh-restart-button
+dsh plugin --profile desktop add @yangluo-2021/dsh-restart-button
 ```
 
 从本地目录（改源码时）：
@@ -45,7 +45,7 @@ dsh plugin --profile desktop add file:<本目录的绝对路径>
 卸载：
 
 ```bash
-dsh plugin --profile desktop remove @877701572-wq/dsh-restart-button
+dsh plugin --profile desktop remove @yangluo-2021/dsh-restart-button
 ```
 
 DSH Desktop 完全关闭后才能用命令行改 profile：应用的插件管理器在运行期间持有一把 profile 写锁，CLI 不会去动它。
@@ -81,7 +81,7 @@ dsh plugin --profile desktop add file:<解压后目录的绝对路径>
 ### 3. 从 npm 装
 
 ```bash
-dsh plugin --profile desktop add @877701572-wq/dsh-restart-button
+dsh plugin --profile desktop add @yangluo-2021/dsh-restart-button
 ```
 
 裸名 `dsh-restart-button` 在 npm 上已被别人占用（v0.1.2），所以本包发布在带 scope 的名字下。
@@ -89,7 +89,7 @@ dsh plugin --profile desktop add @877701572-wq/dsh-restart-button
 ### 4. 从 GitHub 装
 
 ```bash
-dsh plugin --profile desktop add github:877701572-wq/dsh-restart-button
+dsh plugin --profile desktop add github:Yangluo-2021/dsh-restart-button
 ```
 
 ### 分发前要知道的三条限制

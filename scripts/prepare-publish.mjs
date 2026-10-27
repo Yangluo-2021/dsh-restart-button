@@ -130,6 +130,10 @@ function main() {
   const readmeNext = readme
     .replaceAll('@NPM_USER/', `@${options.npmUser}/`)
     .replace(new RegExp(`@[a-z0-9._-]+/${PACKAGE}`, 'g'), `@${options.npmUser}/${PACKAGE}`)
+    // The GitHub install line carries the GitHub account, not the npm scope,
+    // and the two do not have to match. Left alone it would keep pointing at
+    // the previous account after a rename.
+    .replace(/github:[^\s/]+\//g, `github:${options.githubUser}/`)
   writeText(readmePath, readmeNext, options.dryRun, changed)
   console.log('\nREADME.md')
   note(`安装命令 → dsh plugin --profile desktop add ${options.packageName}`)
