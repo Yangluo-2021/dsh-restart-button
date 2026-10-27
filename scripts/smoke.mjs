@@ -315,7 +315,8 @@ globalThis.window = { __ModuleLoader__: { load: (entry) => { loaded = entry } } 
 // eslint-disable-next-line no-new-func
 new Function(source)()
 
-check('declares itself to the module loader', loaded !== null && loaded.id === 'dsh-restart-button', loaded?.id)
+const pkgName = JSON.parse(readFileSync(join(root, 'package.json'), 'utf8')).name
+check('declares itself to the module loader (id = package name)', loaded !== null && loaded.id === pkgName, loaded?.id)
 
 let hooks = 0
 const react = {

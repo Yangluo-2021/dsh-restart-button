@@ -22,7 +22,13 @@
  * beyond `react`, which the host already offers every client.
  */
 window.__ModuleLoader__.load({
-  id: 'dsh-restart-button',
+  /**
+   * Must equal this package's name verbatim, scope included. The loader keys
+   * its graph row by the package name; a bare id makes the row look
+   * unregistered, the loader re-fetches the script, and the second execution
+   * throws "duplicate factory registration" on web boot (0.6.0 shipped this).
+   */
+  id: '@yangluo-2021/dsh-restart-button',
   factory: (require) => {
     var module = { exports: {} }
     var exports = module.exports

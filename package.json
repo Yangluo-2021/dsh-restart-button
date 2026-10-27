@@ -1,7 +1,7 @@
 {
   "name": "@yangluo-2021/dsh-restart-button",
   "description": "A restart button floating at the top-right of DeepSeek Harness — restart the whole desktop app gracefully, with a confirmation only when work is running. · DSH 右上角常驻重启按钮：优雅重启整个桌面端，有任务在跑时才确认。",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "type": "module",
   "main": "lib/index.js",
   "license": "MIT",
